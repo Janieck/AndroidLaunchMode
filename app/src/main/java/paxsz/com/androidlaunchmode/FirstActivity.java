@@ -44,8 +44,9 @@ public class FirstActivity extends BaseActivity implements View.OnClickListener 
                 startActivity(singleTop);
                 break;
             case R.id.stSecond:
-                Intent stSecond = new Intent(this, SecondActivity.class);
-                startActivity(stSecond);
+                /*Intent stSecond = new Intent(this, SecondActivity.class);
+                startActivity(stSecond);*/
+                SecondActivity.actionStart(this, "data1", "data2");
                 break;
 
             case R.id.singleInstace:

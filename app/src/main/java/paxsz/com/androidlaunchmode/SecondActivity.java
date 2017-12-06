@@ -1,5 +1,6 @@
 package paxsz.com.androidlaunchmode;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,6 +18,13 @@ public class SecondActivity extends BaseActivity implements View.OnClickListener
         setContentView(R.layout.activity_second);
         Log.e("SecondActivity", "Task id is" + getTaskId());
         initView();
+    }
+
+    public static void actionStart(Context context, String data1, String data2) {
+        Intent intent = new Intent(context, SecondActivity.class);
+        intent.putExtra("param1", data1);
+        intent.putExtra("param2", data2);
+        context.startActivity(intent);
     }
 
     private void initView() {
